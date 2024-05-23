@@ -49,23 +49,23 @@ const Signup = () => {
 
 
     return (
-        <div>
+        <div className="bg-red-300 text-center" >
             <form >
-            <label> 
-                <p> Username: </p>
-                <input type="text" name="username" onChange={handleDetails} />
+            <label > 
+                <p > Username: </p>
+                <input type="text" name="username" onChange={handleDetails} className="border-4 border-black" />
                 </label>
                 
                 <label> 
                 <p> password: </p>
-                <input type="text" name="password" onChange={handleDetails} />
+                <input type="text" name="password" onChange={handleDetails} className="border-4 border-black" />
                 </label>
                 <br />
-                <button onClick={fetchSignup}> Signup </button>
+                <button onClick={fetchSignup} className="bg-yellow-300 rounded-lg m-3" > Signup </button>
             </form>
 
             {/* Now here let us display the api message */}
-            <h2> {apiData?.message} </h2>
+            <h2 className="bg-blue-400" > {apiData?.message} </h2>
 
             </div>
     )

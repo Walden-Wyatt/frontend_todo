@@ -17,8 +17,8 @@ const Logout = () => {
 });
 
     return(
-        <div>
-            <button onClick={logoutFunction}> Logout ! </button>
+        <div className="bg-gray-400" >
+            <button onClick={logoutFunction} className="bg-yellow-400 text-center rounded-md" > Logout ! </button>
             {!checkToken ? <h2> You have Logged Out Successfully </h2> : <h2> Failed to Logout ! </h2> } 
         </div>
     )

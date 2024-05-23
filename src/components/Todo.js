@@ -186,14 +186,14 @@ const Todo = () => {
     // console.log(decodePayload.username)
 
     return (
-                <div>
-                    <h2> Todo List </h2>
+                <div className="bg-gray-300" >
+                    <h2 className="bg-red-400 text-center" > Todo List </h2>
         
-                    <div>
-                        <p> Enter Todo Data </p>
-                        <input type="text" name="todoitem" onChange={handleAddTodo} />
-                        <button onClick={fetchAddTodo} >Add Todo</button>
-                        {apiData && (<h2> {apiData.message} </h2>)}
+                    <div >
+                        <p className="bg-green-300 m-4 rounded-lg" > Enter Todo Data </p>
+                        <input type="text" name="todoitem" onChange={handleAddTodo} className="border-4 border-black" />
+                        <button onClick={fetchAddTodo} className="bg-yellow-400 m-2 rounded-lg w-24" >Add Todo</button>
+                        {apiData && (<h2 className="bg-purple-500"> {apiData.message} </h2>)}
                     </div>
 
                     {/* Let us Iterate and Display all the Todo of that specifiusers  */}
@@ -201,11 +201,11 @@ const Todo = () => {
                     <div>
                         {apiData?.tododatas?.todo.map((value, index) => {
                             return(
-                                <div key={index}> 
+                                <div key={index} className="bg-blue-200 m-4 w rounded-lg" > 
                                 {value} 
-                                <button onClick={() => {setToggleClickAndIndex({toggleValue: true, updateIndex: index}) }} > Update </button>
+                                <button onClick={() => {setToggleClickAndIndex({toggleValue: true, updateIndex: index}) }}  className="bg-red-500 rounded-lg m-4"> Update </button>
                                 {/* <button onClick={(e) => { handleDeleteTodo(e); setDeleteTodo({username: decodePayload.username, todoid: index}); fetchDeleteTodo(e) }} > Delete </button> */}
-                                <button onClick={ () => { handleDeleteTodo(index) }} > Delete </button> 
+                                <button onClick={ () => { handleDeleteTodo(index) }} className="bg-red-500 rounded-lg m-4"> Delete </button> 
                                 </div>
                             )
                         }) }
@@ -217,9 +217,9 @@ const Todo = () => {
                     {toggleClickAndIndex.toggleValue && (
                          <div>
                             {/* <input onChange={(e) => { setUpdateTodo({usename: decodePayload.username, tododata: e.target.value, todoid: toggleClickAndIndex.updateIndex})}} /> */}
-                            <input onChange={(e) => { setUpdateTodo({tododata: e.target.value})}} />
-                            <button onClick={(e) => { handleUpdateTodo(e); fetchUpdateTodo() }} > Update </button>
-                            <button onClick={() => {setToggleClickAndIndex({toggleValue: false, updateIndex: -0})}} > Cancel </button>
+                            <input onChange={(e) => { setUpdateTodo({tododata: e.target.value})}} className="border-2 border-black m-2" />
+                            <button onClick={(e) => { handleUpdateTodo(e); fetchUpdateTodo() }} className="bg-red-500 rounded-lg m-4" > Update </button>
+                            <button onClick={() => {setToggleClickAndIndex({toggleValue: false, updateIndex: -0})}} className="bg-red-500 rounded-lg m-4" > Cancel </button>
                         </div>
                     ) }
 
