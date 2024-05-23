@@ -56,7 +56,7 @@ const Todo = () => {
     const fetchAddTodo = async () => {
         
         // e.preventDefault();
-        const responseAddTodo = await fetch("http://localhost:4000/addtodo", {
+        const responseAddTodo = await fetch("https://backend-todo-sigma.vercel.app/addtodo", {
             method: "POST",
             headers: {
                 "content-type": "application/json", 
@@ -80,7 +80,7 @@ const Todo = () => {
 
     const fetchGetTodo = async (accessToken) => {
         // e.preventDefault();
-        const responseGetTodo = await fetch("http://localhost:4000/gettodo", {
+        const responseGetTodo = await fetch("https://backend-todo-sigma.vercel.app/gettodo", {
             method: "POST",
             headers: {
                 "content-type": "application/json", // whenever you are sending some data from the frontend make sure you add this line of code, else data will not be sent to the Backend.
@@ -103,7 +103,7 @@ const Todo = () => {
 
     const fetchUpdateTodo = async () => {
         // e.preventDefault();
-        const responseUpdate = await fetch("http://localhost:4000/updatetodo", {
+        const responseUpdate = await fetch("https://backend-todo-sigma.vercel.app/updatetodo", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -126,7 +126,7 @@ const Todo = () => {
 
     const fetchDeleteTodo = async (index) => {
         // e.preventDefault();
-        const responseDelete = await fetch("http://localhost:4000/deletetodo", {
+        const responseDelete = await fetch("https://backend-todo-sigma.vercel.app/deletetodo", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -148,7 +148,7 @@ const Todo = () => {
         const fetchNewAccessToken = async () => {
 
             try{
-                const accessResonse = await fetch("http://localhost:4000/newaccesstoken", {
+                const accessResonse = await fetch("https://backend-todo-sigma.vercel.app/newaccesstoken", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

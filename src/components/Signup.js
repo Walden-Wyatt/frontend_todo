@@ -21,7 +21,7 @@ const Signup = () => {
         try{ 
         e.preventDefault();
 
-        const signupResponse = await fetch("http://localhost:4000/signup", {
+        const signupResponse = await fetch("https://backend-todo-sigma.vercel.app/signup", {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
